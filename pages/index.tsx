@@ -95,6 +95,20 @@ const Index = () => {
 				>
 					{label}
 				</Box>
+				<Link
+					isExternal
+					href="https://testnets.opensea.io/collection/kpsnft-nh6spmavht"
+					as="button"
+					p={4}
+					w="65%"
+					color="white"
+					fontWeight="bold"
+					borderRadius="md"
+					onClick={!account ? connectWallet : mintNft}
+					bgGradient="linear(to-r, blue.700, blue.400)"
+				>
+					🌊 View Collection on OpenSea
+				</Link>
 			</Main>
 			<DarkModeSwitch />
 		</Container>
