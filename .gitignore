@@ -39,5 +39,3 @@ coverage
 coverage.json
 typechain
 .env
-
-hardhat.config.js
