@@ -49,6 +49,8 @@ contract MyEpicNFT is ERC721URIStorage {
         "Madara"
     ];
 
+    event NewEpicNFTMinted(address sender, uint256 tokenId);
+
     // We need to pass the name of our NFTs token and it's symbol.
     constructor() ERC721("KpsNFT", "KPNFT") {
         console.log("This is Garrett's NFT contract :)!");
@@ -145,5 +147,6 @@ contract MyEpicNFT is ERC721URIStorage {
         _tokenIds.increment();
 
         console.log("%s minted the NFT: %s", msg.sender, newItemId);
+        emit NewEpicNFTMinted(msg.sender, newItemId);
     }
 }
